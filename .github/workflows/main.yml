@@ -46,4 +46,4 @@ jobs:
           name: Build file
           if: always()
       - name: run Surge
-        run: surge build/
+        run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
