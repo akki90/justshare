@@ -35,6 +35,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build,test]
     steps:
+    
+      - name: Clone the repository
+        uses: actions/checkout@v2
       - name: Surge install
         run: npm install -g surge
       - name: download the build file
